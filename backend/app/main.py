@@ -6,6 +6,10 @@ from .omr_service import extract_answers, compare_answers
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Backend de OMR funcionando correctamente ✅"}
+
 @app.post("/grade")
 async def grade(teacher: UploadFile = File(...), student: UploadFile = File(...)):
     teacher_bytes = np.frombuffer(await teacher.read(), np.uint8)
