@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'OMR Evaluador',
+      title: 'Evalink',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const OmrScreen(),
     );
